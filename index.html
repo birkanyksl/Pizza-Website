@@ -1,362 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resraurant Web Site</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <!-- header section start -->
-    <header class="header">
-      <a href="" class="logo">
-        <img src="images/logo.png" alt="logo" />
-      </a>
-      <nav class="navbar">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Menu</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
-        <a href="#">Blogs</a>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resraurant Web Site</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <div class="buttons">
-        <button>
-          <i class="fas fa-search"></i>
-        </button>
+<body>
+  <!-- header section start -->
+  <header class="header">
+    <a href="" class="logo">
+      <img src="images/logo.png" alt="logo" />
+    </a>
+    <nav class="navbar">
+      <a href="#home" >Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+      <a href="#blogs">Blogs</a>
+    </nav>
 
-        <button>
-          <i class="fas fa-shopping-cart"></i>
-        </button>
+    <div class="buttons">
+      <button id="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
 
-        <button>
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </header>
-    <!-- header section end -->
+      <button id="cart-btn">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
 
-    <!-- home section start  -->
-    <section class="home">
-      <div class="content">
-        <h3>THE BEST <br />VERSION OF PIZZA</h3>
-        <p>
-          Our website, bringing you the love of pizza, awaits you to enjoy the
-          taste of pizza in every language
-        </p>
-        <a href="#" class="btn">Order Now</a>
-      </div>
-    </section>
+      <button id="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
 
-    <!-- home section end  -->
+    <div class="search-form ">
+      <input type="text" class="search-input" id="search-box" placeholder="search here">
+      <i class="fas fa-search"></i>
+    </div>
+<div class="cart-items-container">
+  <div class="cart-item">
+    <i class="fas fa-times"></i>
+    <img src="images/menu-1.png" alt="menu">
+    <div class="content">
+      <h3>cart item 01</h3>
+      <div class="price">$15.99</div>
+    </div>
+  </div>
 
-    <!-- menu section start  -->
-    <section class="menu">
-      <h1 class="heading">our <span>menu</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <div class="box-head">
-            <img src="images/menu-1.png" alt="menu" />
-            <span class="menu-category">Pizza</span>
-            <h3>6 Mini Pizzas</h3>
-            <div class="price">$104,99 <span>$119.99</span></div>
-          </div>
+  <div class="cart-item">
+    <i class="fas fa-times"></i>
+    <img src="images/menu-2.png" alt="menu">
+    <div class="content">
+      <h3>cart item 02</h3>
+      <div class="price">$15.99</div>
+    </div>
+  </div>
 
-          <div class="box-bottom">
-            <a href="#" class="btn">Add To Cart</a>
-          </div>
+  <div class="cart-item">
+    <i class="fas fa-times"></i>
+    <img src="images/menu-3.png" alt="menu">
+    <div class="content">
+      <h3>cart item 03</h3>
+      <div class="price">$15.99</div>
+    </div>
+  </div>
+
+  <div class="cart-item">
+    <i class="fas fa-times"></i>
+    <img src="images/menu-4.png" alt="menu">
+    <div class="content">
+      <h3>cart item 04</h3>
+      <div class="price">$15.99</div>
+    </div>
+  </div>
+  <a href="#" class="btn">Checkout Now</a>
+</div>
+
+  </header>
+  <!-- header section end -->
+
+  <!-- home section start  -->
+  <section class="home" id="home">
+    <div class="content">
+      <h3>THE BEST <br />VERSION OF PIZZA</h3>
+      <p>
+        Our website, bringing you the love of pizza, awaits you to enjoy the
+        taste of pizza in every language
+      </p>
+      <a href="#" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- home section end  -->
+
+  <!-- menu section start  -->
+  <section class="menu" id="menu">
+    <h1 class="heading">our <span>menu</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="box-head">
+          <img src="images/menu-1.png" alt="menu" />
+          <span class="menu-category">Pizza</span>
+          <h3>6 Mini Pizzas</h3>
+          <div class="price">$104,99 <span>$119.99</span></div>
         </div>
 
-        <div class="box">
-          <div class="box-head">
-            <img src="images/menu-2.png" alt="menu" />
-            <span class="menu-category">Burger</span>
-            <h3>5 mini burger</h3>
-            <div class="price">$99.99 <span>$109.99</span></div>
-          </div>
-
-          <div class="box-bottom">
-            <a href="#" class="btn">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="box-head">
-            <img src="images/menu-3.png" alt="menu" />
-            <span class="menu-category">Pizza</span>
-            <h3>2 Mixed Pizzas</h3>
-            <div class="price">$49.99 <span>$59.99</span></div>
-          </div>
-
-          <div class="box-bottom">
-            <a href="#" class="btn">Add To Cart</a>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="box-head">
-            <img src="images/menu-4.png" alt="menu" />
-            <span class="menu-category">Burger</span>
-            <h3>3 Meatball Burger</h3>
-            <div class="price">$79.99 <span>$99.99</span></div>
-          </div>
-
-          <div class="box-bottom">
-            <a href="#" class="btn">Add To Cart</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- menu section end  -->
-
-    <!-- products section start  -->
-
-    <section class="products">
-      <h1 class="heading">our <span>products</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <div class="box-head">
-            <span class="title">MINI BURGER</span>
-            <a href="#" class="name">Bacon Burger</a>
-          </div>
-          <div class="image">
-            <img src="images/product-1.png" alt="" />
-          </div>
-          <div class="box-bottom">
-            <div class="info">
-              <b class="price">$6.00</b>
-              <span class="amoun">110gr / 300 Cal</span>
-            </div>
-            <div class="product-btn">
-              <a href="#">
-                <i class="fas fa-plus"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="box-head">
-            <span class="title">DARK BURGER</span>
-            <a href="#" class="name">Dark Cheese Burger</a>
-          </div>
-          <div class="image">
-            <img src="images/product-2.png" alt="" />
-          </div>
-          <div class="box-bottom">
-            <div class="info">
-              <b class="price">$12.00</b>
-              <span class="amoun">220gr / 600 Cal</span>
-            </div>
-            <div class="product-btn">
-              <a href="#">
-                <i class="fas fa-plus"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="box dark-bg">
-          <div class="box-head">
-            <span class="title">DARK BURGER</span>
-            <a href="#" class="name">Dark Cheese Double Burger</a>
-          </div>
-          <div class="image">
-            <img src="images/dark-product.jpg" alt="" />
-          </div>
-          <div class="box-bottom">
-            <div class="info">
-              <b class="price">$18.00</b>
-              <span class="amount">440gr / 1200 Cal</span>
-            </div>
-            <div class="product-btn">
-              <a href="#">
-                <i class="fas fa-plus"></i>
-              </a>
-            </div>
-          </div>
+        <div class="box-bottom">
+          <a href="#" class="btn">Add To Cart</a>
         </div>
       </div>
-    </section>
 
-    <!-- products section end  -->
+      <div class="box">
+        <div class="box-head">
+          <img src="images/menu-2.png" alt="menu" />
+          <span class="menu-category">Burger</span>
+          <h3>5 mini burger</h3>
+          <div class="price">$99.99 <span>$109.99</span></div>
+        </div>
 
-    <!-- about us section start  -->
-    <section class="about">
-      <h1 class="heading">about <span>us</span></h1>
-      <div class="row">
+        <div class="box-bottom">
+          <a href="#" class="btn">Add To Cart</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-head">
+          <img src="images/menu-3.png" alt="menu" />
+          <span class="menu-category">Pizza</span>
+          <h3>2 Mixed Pizzas</h3>
+          <div class="price">$49.99 <span>$59.99</span></div>
+        </div>
+
+        <div class="box-bottom">
+          <a href="#" class="btn">Add To Cart</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-head">
+          <img src="images/menu-4.png" alt="menu" />
+          <span class="menu-category">Burger</span>
+          <h3>3 Meatball Burger</h3>
+          <div class="price">$79.99 <span>$99.99</span></div>
+        </div>
+
+        <div class="box-bottom">
+          <a href="#" class="btn">Add To Cart</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- menu section end  -->
+
+  <!-- products section start  -->
+
+  <section class="products" id="products">
+    <h1 class="heading">our <span>products</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="box-head">
+          <span class="title">MINI BURGER</span>
+          <a href="#" class="name">Bacon Burger</a>
+        </div>
         <div class="image">
-          <img src="images/about.jpg" alt="about" />
+          <img src="images/product-1.png" alt="" />
+        </div>
+        <div class="box-bottom">
+          <div class="info">
+            <b class="price">$6.00</b>
+            <span class="amoun">110gr / 300 Cal</span>
+          </div>
+          <div class="product-btn">
+            <a href="#">
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-head">
+          <span class="title">DARK BURGER</span>
+          <a href="#" class="name">Dark Cheese Burger</a>
+        </div>
+        <div class="image">
+          <img src="images/product-2.png" alt="" />
+        </div>
+        <div class="box-bottom">
+          <div class="info">
+            <b class="price">$12.00</b>
+            <span class="amoun">220gr / 600 Cal</span>
+          </div>
+          <div class="product-btn">
+            <a href="#">
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="box dark-bg">
+        <div class="box-head">
+          <span class="title">DARK BURGER</span>
+          <a href="#" class="name">Dark Cheese Double Burger</a>
+        </div>
+        <div class="image">
+          <img src="images/dark-product.jpg" alt="" />
+        </div>
+        <div class="box-bottom">
+          <div class="info">
+            <b class="price">$18.00</b>
+            <span class="amount">440gr / 1200 Cal</span>
+          </div>
+          <div class="product-btn">
+            <a href="#">
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- products section end  -->
+
+  <!-- about us section start  -->
+  <section class="about" id="about">
+    <h1 class="heading">about <span>us</span></h1>
+    <div class="row">
+      <div class="image">
+        <img src="images/about.jpg" alt="about" />
+      </div>
+      <div class="content">
+        <h3>Secret Recipe</h3>
+        <p>
+          The magical world of burgers awaits you, where first-class
+          ingredients come together to delight your taste buds with every
+          bite! Burger, one of the most iconic dishes in world cuisine, is
+          ready to take you to the peak of flavor with each mouthful. These
+          burgers, hidden within a secret recipe, are like works of art where
+          each ingredient is carefully selected with love and care. Fresh
+          greens, tantalizing spices, exquisite cheeses, and, of course, the
+          delicious beef or chicken patty... It's the enchanting dance of
+          these ingredients that forms the foundation of our burgers.
+        </p>
+
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <!-- about us section end  -->
+
+  <!-- review section start  -->
+  <section class="review" id="review">
+    <h1 class="heading">customer's <span>review</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="images/quote.png" alt="quote" />
+        <p>
+          Your menu offers a delightful array of choices! I recently tasted
+          your BBQ Chicken Pizza, and it was a flavor explosion. The
+          combination of tender chicken and smoky barbecue sauce was heavenly.
+          I can't wait to sample more dishes from your menu.
+        </p>
+        <div class="user-container">
+          <img src="images/avatar-1.jpg" alt="avatar" class="user" />
+        </div>
+        <h3>Serhat Pınar</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/quote.png" alt="quote" />
+        <p>
+          Your menu is a culinary adventure! I had the pleasure of savoring
+          your Veggie Delight Pizza, and it was a delightful surprise. The
+          freshness of the vegetables and the savory toppings made it a
+          memorable experience. I'm eager to explore more flavors from your
+          diverse menu.
+        </p>
+        <div class="user-container">
+          <img src="images/avatar-2.png" alt="avatar" class="user" />
+        </div>
+        <h3>Mario Gomez</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/quote.png" alt="quote" />
+        <p>
+          I must say, your menu is a culinary masterpiece! I had the pleasure
+          of trying the Margherita pizza, and it was exquisite. The blend of
+          flavors was extraordinary. I'm eagerly anticipating my return to
+          indulge in the other tempting offerings from your menu.
+        </p>
+        <div class="user-container">
+          <img src="images/avatar-3.jpg" alt="avatar" class="user" />
+        </div>
+        <h3>Nursena Yaktı</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- review section end  -->
+
+  <!-- contact section start  -->
+
+  <section class="contact" id="contact">
+    <h1 class="heading">contact <span>us</span></h1>
+    <div class="row">
+      <iframe class="map" src="https://www.google.com/maps/d/embed?mid=1hYO-_V42u312B5L7GzuKkEta7eM&hl=en&ehbc=2E312F">
+      </iframe>
+      <form>
+        <h3>Get in Touch</h3>
+        <div class="inputBox">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="name">
+        </div>
+        <div class="inputBox">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="email">
+        </div>
+        <div class="inputBox">
+          <i class="fas fa-phone"></i>
+          <input type="number" placeholder="number">
+        </div>
+        <input type="submit" class="btn" value="Contact Now">
+      </form>
+  </section>
+
+  <!-- contact section end  -->
+
+  <!-- blog section start  -->
+  <section class="blogs" id="blogs">
+    <h1 class="heading">Our <span>Blogs</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="images/blog-1.jpg" alt="blog">
         </div>
         <div class="content">
-          <h3>Secret Recipe</h3>
-          <p>
-            The magical world of burgers awaits you, where first-class
-            ingredients come together to delight your taste buds with every
-            bite! Burger, one of the most iconic dishes in world cuisine, is
-            ready to take you to the peak of flavor with each mouthful. These
-            burgers, hidden within a secret recipe, are like works of art where
-            each ingredient is carefully selected with love and care. Fresh
-            greens, tantalizing spices, exquisite cheeses, and, of course, the
-            delicious beef or chicken patty... It's the enchanting dance of
-            these ingredients that forms the foundation of our burgers.
-          </p>
-
-          <a href="#" class="btn">Learn More</a>
+          <a href="#" class="title"> How to Make Burgers</a>
+          <span>by admin / 10st May, 2023</span>
+          <p>To make a burger, you'll need ground beef, seasonings, and a skillet.</p>
+          <a href="#" class="btn">Read More</a>
         </div>
       </div>
-    </section>
-    <!-- about us section end  -->
 
-    <!-- review section start  -->
-    <section class="review">
-      <h1 class="heading">customer's <span>review</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <img src="images/quote.png" alt="quote" />
-          <p>
-            Your menu offers a delightful array of choices! I recently tasted
-            your BBQ Chicken Pizza, and it was a flavor explosion. The
-            combination of tender chicken and smoky barbecue sauce was heavenly.
-            I can't wait to sample more dishes from your menu.
-          </p>
-          <div class="user-container">
-          <img src="images/avatar-1.jpg" alt="avatar" class="user" />
-          </div>
-          <h3>Serhat Pınar</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
+      <div class="box">
+        <div class="image">
+          <img src="images/blog-2.jpg" alt="blog">
         </div>
-
-        <div class="box">
-          <img src="images/quote.png" alt="quote" />
-          <p>
-            Your menu is a culinary adventure! I had the pleasure of savoring
-            your Veggie Delight Pizza, and it was a delightful surprise. The
-            freshness of the vegetables and the savory toppings made it a
-            memorable experience. I'm eager to explore more flavors from your
-            diverse menu.
-          </p>
-          <div class="user-container">
-          <img src="images/avatar-2.png" alt="avatar" class="user" />
-           </div>
-          <h3>Mario Gomez</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="images/quote.png" alt="quote" />
-          <p>
-            I must say, your menu is a culinary masterpiece! I had the pleasure
-            of trying the Margherita pizza, and it was exquisite. The blend of
-            flavors was extraordinary. I'm eagerly anticipating my return to
-            indulge in the other tempting offerings from your menu.
-          </p>
-          <div class="user-container">
-          <img src="images/avatar-3.jpg" alt="avatar" class="user" />
-          </div>
-          <h3>Nursena Yaktı</h3>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
+        <div class="content">
+          <a href="#" class="title"> How to Make Burgers</a>
+          <span>by admin / 21st June, 2023</span>
+          <p>Start by shaping the beef into patties and seasoning them generously.</p>
+          <a href="#" class="btn">Read More</a>
         </div>
       </div>
-    </section>
-    <!-- review section end  -->
 
-    <!-- contact section start  -->
-
-      <section class="contact">
-        <h1 class="heading">contact <span>us</span></h1>
-        <div class="row">
-            <iframe class="map" src="https://www.google.com/maps/d/embed?mid=1hYO-_V42u312B5L7GzuKkEta7eM&hl=en&ehbc=2E312F">
-        </iframe>
-        <form>
-            <h3>Get in Touch</h3>
-            <div class="inputBox">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="name">
-            </div>
-            <div class="inputBox">
-                <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="email">
-            </div>
-            <div class="inputBox">
-                <i class="fas fa-phone"></i>
-                <input type="number" placeholder="number">
-            </div>
-            <input type="submit" class="btn" value="Contact Now">
-        </form>
-      </section>
-
-    <!-- contact section end  -->
-
-    <!-- blog section start  -->
-    <section class="blogs">
-        <h1 class="heading">Our <span>Blogs</span></h1>
-        <div class="box-container">
-            <div class="box">
-                <div class="image">
-                <img src="images/blog-1.jpg" alt="blog">
-                </div>
-              <div class="content">
-                <a href="#" class="title"> How to Make Burgers</a>
-                <span>by admin / 10st May, 2023</span>
-                <p>To make a burger, you'll need ground beef, seasonings, and a skillet.</p>
-                <a href="#" class="btn">Read More</a>
-              </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                <img src="images/blog-2.jpg" alt="blog">
-                </div>
-              <div class="content">
-                <a href="#" class="title"> How to Make Burgers</a>
-                <span>by admin / 21st June, 2023</span>
-                <p>Start by shaping the beef into patties and seasoning them generously.</p>
-                <a href="#" class="btn">Read More</a>
-              </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                <img src="images/blog-3.jpg" alt="blog">
-                </div>
-              <div class="content">
-                <a href="#" class="title"> How to Make Burgers</a>
-                <span>by admin / 10st August, 2023</span>
-                <p>Heat the skillet, cook the patties until they're browned and juicy.</p>
-                <a href="#" class="btn">Read More</a>
-              </div>
-            </div>
+      <div class="box">
+        <div class="image">
+          <img src="images/blog-3.jpg" alt="blog">
         </div>
-    </section>
-    <!-- blog section end  -->
-  </body>
+        <div class="content">
+          <a href="#" class="title"> How to Make Burgers</a>
+          <span>by admin / 10st August, 2023</span>
+          <p>Heat the skillet, cook the patties until they're browned and juicy.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- blog section end  -->
+  <!-- footer section start  -->
+  <section class="footer">
+    <div class="search">
+      <input type="text" class="search-input" placeholder="Search">
+      <button class="btn btn-primary">Search</button>
+    </div>
+    <div class="share">
+      <a href="" class="fab fa-facebook"></a>
+      <a href="" class="fab fa-twitter"></a>
+      <a href="" class="fab fa-instagram"></a>
+      <a href="" class="fab fa-linkedin"></a>
+      <a href="" class="fab fa-pinterest"></a>           
+    </div>
+
+    <div class="links">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Menu</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+      <a href="#">Blogs</a>
+    </div>
+
+    <div class="credit">
+      created by <span>BirkanYksl</span> | all rights reserved
+    </div>
+  </section>
+
+
+  <!-- footer section end  -->
+
+  <script src="script.js"></script>
+</body>
+
 </html>
